@@ -8,7 +8,7 @@ class Fixed
 	public:
 		Fixed(void); // Default constructor
 		Fixed(const Fixed& instance); // Copy constructor
-		Fixed	operator+(const Fixed& instance); // Copy assignment operator overload
+		Fixed	operator=(const Fixed& instance); // Copy assignment operator overload
 		~Fixed();
 
 		int		getRawBits(void) const;
