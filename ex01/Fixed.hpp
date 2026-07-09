@@ -2,6 +2,7 @@
 # define FIXED_HPP
 
 # include <iostream>
+# include <cmath>
 
 class Fixed
 {
@@ -17,11 +18,12 @@ class Fixed
 		int		toInt(void) const;
 		int		getRawBits(void) const;
 		void	setRawBits(int const raw);
-		void	operator<<(std::ostream& os);
 
 	private:
 		int		value;
 		static const int	fraction_bits = 8; // Non-member attribute
 };
+
+std::ostream&	operator<<(std::ostream& os, const Fixed& instance);
 
 #endif
