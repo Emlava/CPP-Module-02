@@ -38,7 +38,7 @@ Fixed::Fixed(const int i)
 Fixed::Fixed(const float f)
 {
 	std::cout << "Float constructor called\n";
-	value = f * std::pow(2, fraction_bits);
+	value = round(f * std::pow(2, fraction_bits)); // Rounds to nearest value
 }
 
 float	Fixed::toFloat(void) const
